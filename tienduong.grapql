@@ -1,0 +1,31 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserEntity {
+  id: Float!
+  username: String!
+  password: String!
+}
+
+type Query {
+  getAllUser: [UserEntity!]!
+  getUserById(userId: Float!): String!
+}
+
+type Mutation {
+  createUser(input: UserData!): Boolean!
+  deleteUser(userId: Float!): String!
+  updateUser(userEntity: UserModel!): Boolean!
+}
+
+input UserData {
+  username: String!
+  password: String!
+}
+
+input UserModel {
+  id: Float!
+  password: String!
+  username: String!
+}
